@@ -102,7 +102,7 @@ public class newTask extends AppCompatActivity {
                     return;
                 }
                 postDataUsingVolley(date,time,about,min);
-                //Toast.makeText(newTask.this, "Task Saved Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(newTask.this, "Task Saved Successfully", Toast.LENGTH_SHORT).show();
             }
         });
 

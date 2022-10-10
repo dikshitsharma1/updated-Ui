@@ -43,8 +43,6 @@ public class admin_screen extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         token = intent.getStringExtra("token");
-        EditText edtText = (EditText) findViewById(R.id.editTextTextPersonName);
-        edtText.setText(name);
         maddmem=findViewById(R.id.button);
 
         maddmem.setOnClickListener(new View.OnClickListener() {
@@ -58,11 +56,7 @@ public class admin_screen extends AppCompatActivity {
         mrecyclerView = findViewById(R.id.recyclerView);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mrecyclerView.setHasFixedSize(true);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Live Matches");
         //back buttons
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
         loadData();
     }
     public  void loadData(){
